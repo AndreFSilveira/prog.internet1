@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+		<meta charset="utf-8">
+		<title>Cadastro</title>
+<style type="text/css">
+    body{
+	    background-image: url('imagens/logo3.jpg');
+    }
+	label{
+		white-space: pre;
+	}
+	input {
+		font: 12px verdana, arial, helvetica, sans-serif;
+		border-radius: 5px 5px 5px 5px;
+		border-style: inset;
+		
+    }
+    textarea{
+    	border-radius: 15px 15px 15px 15px;
+    	border: 2px;
+    	border-style: inset;
+    }
+    legend{
+		border: 1px solid white;
+		background-image: -webkit-linear-gradient(blue, black);
+		color: white;
+		border-radius: 5px 5px 5px 5px;
+		margin-left: 5%;
+	}
+	fieldset{
+		border-radius: 20px 20px 20px 20px;
+		border-style: outset;
+		margin-top: 1%; 
+	}
+	#layout_topo{
+		padding: 1px;
+		width: 85%;
+		margin: 2% 6% 2%;
+		border: solid 2px;
+		border-color: white;
+		color: white; 
+		text-align: center;
+		border-radius: 5px 5px 5px 5px;
+		background-image: -webkit-linear-gradient(blue, black);
+			 
+	}
+	#titulo{
+		font-size: 200%;
+		font-family:   Times, serif, Georgia; 
+		}
+	#cadastro{
+		padding: 2% ;
+		width:81%;
+		margin: 2% 6% 2%;
+		
+		border: 1px solid;
+		border-color: black;
+		border-radius: 5px 5px 5px 5px;
+		background-image: -webkit-linear-gradient(#e2e3db, white);
+
+	}
+	#div1{
+		width: 46%;
+		float: left;
+		padding-left: 5px;
+	}
+	#div2{
+		width: 48%;
+		float: right;
+		
+	}
+	#div3{
+		margin-top: 1px; 
+		width: 48%;
+		float: right;
+		
+	}
+	#div4{
+		margin-top: 20px;		
+		float: bottom;
+		padding-left: 5px;
+	}	
+	
+</style>
+
+</head>
+	<body>
+
+		<div id="layout_topo">
+			<h2 id="titulo">FICHA DE CADASTRO</h2>
+		</div>
+	<div id="cadastro">
+	<form name="cadastro" method="post">
+		<fieldset id="div1">
+			<legend><b>Dados Pessoais</b></legend>
+				<label >Primeiro Nome: <input type="text" name="nome" size="45">          </label>
+				<label >      Sobrenome: <input type="text" name="sobrenome" size="45"></label><br>
+				<label >Sexo: <input type="radio" name="sexo" value="Masculino">Masculino </label>
+				<label ><INPUT type="radio" NAME="sexo" VALUE="Feminino">Feminino</label><br>
+				<label >CPF: <input type="text" name="CPF">  </label>				
+				<label >          RG: <input type="text" name="identidade"></label>
+				<label >Data De Nascimento: <input type="date" name="nascimento"></label><br>
+				<label >Carteira De Habilitação: <select>
+					<optgroup label="Carteira de Motorista">
+						<option>A</option>
+						<option selected="">B</option>
+						<option>A/B</option>
+						<option>C</option>
+						<option>D</option>
+						<option>E</option>
+					</optgroup>
+				</select></label>
+				<label >  Email: <input type="text" name="e-mail">     </label>
+				<label >Telefone: <input type="text" name="telefone" value="(xx)0000-0000"> </label>
+				<label >Celular: <input type="text" name="celular" value="(xx)0000-0000"> </label><br><br>	
+				<label >            Informe Aqui Seus Passatempos:</label><br> <textarea cols="40" rows="14" name="Passatempos"></textarea>
+		</fieldset>
+
+		<fieldset id="div2">
+			<legend><b>Endereço</b></legend>
+				<label>Rua/Avenida/Travessa: <input type="text" name="street" size="40"></label>
+				<label>Numero: <input type="number" name="numero"></label>				
+				<label>Bairro:    <input type="text" name="bairro" size="40"></label>
+				<label>Cidade:   <input type="text" name="cidade" size="40"></label><br>
+				<label>Cep:        <input type="text" name="cep" size="20"></label>
+				<label>Estado</label>
+				<select>
+					<optgroup label="Estados">
+						<option>AC</option>
+						<option>AL</option>
+						<option>AP</option>
+						<option>AM</option>
+						<option>BA</option>
+						<option>CE</option>
+						<option>DF</option>
+						<option>ES</option>
+						<option>GO</option>
+						<option>MA</option>
+						<option>MT</option>
+						<option>MS</option>
+						<option>MG</option>
+						<option>PA</option>
+						<option>PB</option>
+						<option selected>PR</option>
+						<option>PE</option>
+						<option>PI</option>
+						<option>RJ</option>
+						<option>RN</option>
+						<option>RS</option>
+						<option>RO</option>
+						<option>RR</option>
+						<option>SC</option>
+						<option>SP</option>
+						<option>SE</option>	
+						<option>TO</option>
+					</optgroup>
+				</select>
+		</fieldset>
+
+		<fieldset id="div3">
+			<legend><b>Escolaridade</b></legend>
+				<label>Escolha Sua Formaçao:</label>
+				<select>
+					<optgroup label="Escolaridade">
+					<option selected>Fundamental</option>
+					<option>Medio</option>
+					<option>Supletivo</option>
+					<option>Superior</option>
+					<option>Pós Graduado</option>
+					<option>MBA</option>
+					<option>Mestrado</option>
+					<option>Doutorado</option>
+					<option>P.H.D</option>
+					</optgroup>
+				</select>
+				<label>Andamento:</label>
+					<select>
+						<optgroup label="andamento">
+						<option>Cursando</option>
+						<option>Trancado</option>
+						<option>Concluido</option>
+						<option>Incompleto</option>
+						</optgroup>
+					</select>
+				<label>Nome Da Instituição: <input type="Text" name="Instituicao_de_ensino"></label>
+				<label>Cidade: <input type="text" name="cidade" size="40"></label>
+				<label>Estado</label>
+				<select>
+					<optgroup label="Estados">
+						<option>AC</option>
+						<option>AL</option>
+						<option>AP</option>
+						<option>AM</option>
+						<option>BA</option>
+						<option>CE</option>
+						<option>DF</option>
+						<option>ES</option>
+						<option>GO</option>
+						<option>MA</option>
+						<option>MT</option>
+						<option>MS</option>
+						<option>MG</option>
+						<option>PA</option>
+						<option>PB</option>
+						<option selected>PR</option>
+						<option>PE</option>
+						<option>PI</option>
+						<option>RJ</option>
+						<option>RN</option>
+						<option>RS</option>
+						<option>RO</option>
+						<option>RR</option>
+						<option>SC</option>
+						<option>SP</option>
+						<option>SE</option>	
+						<option>TO</option>
+					</optgroup>
+				</select><br><br>
+				<label>     Informe Aqui Os Cursos Que Você Participou</label><br>
+				<textarea cols="40" rows="10" name="Cursos"></textarea>				
+		</fieldset>
+
+		<fieldset id="div4">
+			<legend><b>Dados Profissionais</b></legend>
+				<label>Escolha sua situação atual</label>
+				<select>
+					<optgroup label="Situação">
+					<option>Desempregado</option>
+					<option selected>Assalariado</option>
+					<option>Freelancer</option>
+					<option>Func. Publico</option>
+					<option>Estagiario</option>
+					<option>Aposentado</option>
+					</optgroup>
+				</select>
+			    <br><br>
+				<label id="espaco">Caso Sua Escolha Acima Tenha Sido Desempregado/Aposentado Desconsidere As Opções Abaixo: </label><br><br>
+				<label>Empresa: <input type="text" name="Empresa" size="50"></label>
+				<label>Endereço Da Empresa: <input type="text" name="end_Empresa" size="50"></label>
+				<label>Cargo: <input type="text" name="Cargo" size="25"></label>
+				<label>                   Salario: <input type="text" name="Salario" size="18"></label>
+				<label>                   Departamento: <input type="text" name="Depto" size="35"></label><br><br>
+				<label>         Descreva Resumidamente suas Funçoes Na Empresa</label>
+				<label>                                                                                  Informe Aqui As Suas Habilidades</label><br><label>       </label>
+				<textarea cols="40" rows="10" name="habilidades"></textarea><label>                                                                 </label>
+				<textarea cols="40" rows="10" name="Trabalhos"></textarea>
+		</fieldset>
+
+	</form>
+	</div>
+</body>
+</html>
