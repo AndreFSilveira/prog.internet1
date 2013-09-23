@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo uso Display</title>
+	<style type="text/css" media="all">
+
+	span {
+		background: white;
+		display: block;
+		border: 0.5em solid red;
+		padding: 1em;
+		margin: 0.5em;
+	}
+
+	span.altern8 {
+		background: #5b5;
+	}
+
+	#example2 span {
+		display: inline;
+	}
+	</style>
+</head>
+<body>
+	<h2>Block</h2>
+	<p id="example1"><span>Este</span><span class="altern8">Aquele</span><span>O outro</span><span class="altern8">4</span></p>
+
+	<h2>Inline</h2>
+	<p id="example2"><span>Este</span><span class="altern8">Aquele</span><span>O outro</span><span class="altern8">4</span></p>
+	
+</body>
+</html>
