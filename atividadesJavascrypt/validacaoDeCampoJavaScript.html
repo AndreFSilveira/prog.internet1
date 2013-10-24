@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<meta charset="utf-8">
+	<title>for em javascript</title>
+	
+		<script type="text/javascript">
+			function enviar(){
+				if(document.form1.nome.value==""){
+					alert("O campo nome não pode ser nulo");
+				}
+				if(!isNaN(document.form1.nome.value)){
+					alert("nome não pode conter numeros!");
+				}
+			}
+		</script>
+	</head>
+
+<body>
+	<form action="resultado.asp" method="post" name="form1">
+		Digite aki seu nome:<input name="nome" type="text" size="30" maxlength="50" onblur="enviar();">
+	</form>
+</body>
+</html>
