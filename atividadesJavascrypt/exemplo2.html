@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exmplo2</title>
+	<script type="text/javascript">
+		var userName="", txtObj="", addObj="";
+		function load(){
+			userName = prompt("Seu nome?");
+			addObj =document.getElementById("add");
+			txtObj =document.getElementById("txt");
+			var msg = "Bem vindo " + userName +" a pagina \"" + document.title +"\"";
+			alert(msg);
+		}
+		function exit()
+			{ alert("Adeus " + userName); }
+		function concat() {
+			txtObj.value += addObj.value+'\n';
+			addObj.value = "";
+		}
+		function erase()
+			{ txtObj.value= ""; }
+	</script>
+</head>
+	<body onload = 'load();'onunload = 'exit();'>
+	
+			Texto a crescentar
+		<input type="text"id="add" />
+		<input type="button"onclick='concat();'value="Acrescentar" />
+		<input type="button"onclick='erase();'value="Apagar" /><br>
+		<textarea id="txt"rows="4" cols="30">
+		</textarea>
+	</body>
+</html>

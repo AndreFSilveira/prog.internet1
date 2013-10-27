@@ -1,0 +1,27 @@
+<!DOCTYPE hmtl>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Testes JScript</title>
+
+		<script type="text/javascript">
+		  var exp, val;
+		  function load()
+		  {
+		  	exp = document.getElementById("exp");
+		  	val = document.getElementById("val"); 
+		  } 
+		  function doEval()
+		  { val.value = eval(exp.value)}
+		  function verificatecla()
+		</script>
+	</head>
+	<body onload='load();'>
+		Digite Aqui a sua Expressão para Realizar o Calculo:  Ex:(2+3)/5 <br> 
+		<input type="text" id="exp"/>
+		<input type="button" value="eval" onclick='doEval();'/><br>
+		Resultado:
+		<input type="text" id="val" readonly=""/>
+		
+	</body>
+</html>

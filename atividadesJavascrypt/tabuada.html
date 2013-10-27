@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exemplo3</title>
+		<script type="text/javascript">
+			
+			function genTab() {
+				tab.value = "";
+				var val = Number(tabVal.value),line;
+				for ( var i=1; i <= 10 ; ++i ){
+					line= val + " X " + i + "=" + ( val * i );
+					tab.value += line + "\n";
+				}
+			}
+
+			var tabVal, tab;
+			function load( ) {
+				tabVal = document.getElementById("tabVal");
+				tab = document.getElementById("tab");
+				genTab();
+			}
+		</script>
+	</head>
+	<body onload='load()'>
+		Tabuada dos
+		<input type="text" id="tabVal" onkeyup='genTab();'value="1" maxLength="2"><br>
+		<textarea id="tab" rows="10" cols="15" readonly=""/>
+	</body>
+</html>
