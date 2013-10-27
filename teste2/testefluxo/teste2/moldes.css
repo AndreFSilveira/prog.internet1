@@ -1,0 +1,224 @@
+/* pagina de login */
+	#pagina{
+
+		height:100%; 
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	#login{
+		background-color: #D3D3D3;
+		border: solid;
+		width: 30%;
+		height: 40%;
+		position:absolute;
+		left:35%;
+		top:30%;
+		border-style: outset;
+		border-radius: 20px 20px 20px 20px;
+	}
+	#centro{
+		margin-left: 17%;
+        margin-top: 10%;		
+	}
+	#enviar{
+		height:40px; 
+		width:100px;
+		margin-left: 25%;
+		border-radius: 10px 10px 10px 10px;
+	}
+	#titulo_login{
+		font-size: 1.2em;
+		margin-left: 33%;
+		text-decoration: underline;
+	}
+/*homepage*/
+body{
+            background-image: linear-gradient(to right, transparent, rgba(0,0,0,.3));
+        }
+        #cabecalho{
+            border: solid;
+            font-size: 2em;
+            color: gray;
+            background-color: black;
+            border:1px;
+            margin-top: -8px;
+            margin-left: -10px;
+            width: 101.5%;
+            height: 15%;
+                
+        }
+        #cabecalho b{
+            margin: 10px 10px 10px 10px;
+        }
+        #sair{
+            position: absolute;
+            margin-left: 93%;
+            margin-top: -3%;   
+            
+        }    
+        #sair a{
+            color: gray;
+        }
+        #sair a:link{
+            text-decoration: inherit;
+        }
+        #sair a:hover{
+            text-decoration: underline;
+        }
+        #accordion{
+            width: 23%;
+            position:absolute;
+            top:20%;            
+        }
+        #accordion div{
+        }
+        #accordion a:link{
+                text-decoration: none;
+        }
+        #accordion a:hover{
+            text-decoration: underline;
+        }
+        
+
+
+
+/*Cadastro*/
+h3 {
+    text-align: center;
+}
+
+.cadastro{
+	width: 50%;
+    position: absolute;
+    margin-top: 9.4%;
+    margin-left: 35%
+}
+fieldset{
+    border-radius: 20px 20px 20px 20px;
+    border-style: outset;
+    border-width: 3px;
+    background-color: white;
+}
+.botao1{
+    margin-left: 30%;
+    width: auto;
+    height: auto;
+}   
+.botao2{
+    margin-left: 1%
+}
+label{
+    white-space: pre;
+}
+
+/*LISTA*/
+
+#tipo,#marcas{
+	border-style: solid;
+	border-color: black;
+	width: 72%;
+    position: absolute;
+    margin-top: 9.8%;
+    margin-left: 26%;
+}
+#veiculos{
+    border-style: solid;
+    border-color: black;
+    width: 72%;
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 26%;
+}
+table{
+    border-style: outset;
+    border: 2px;
+    background-color: white;
+
+}
+td{
+	border-style: solid;
+}
+/*Administrativo*/
+#mensagem{
+    border-style: outset;
+    border-color: gray;
+    width: 50%;
+    position: absolute;
+    margin-top: 9.8%;
+    margin-left: 40%;
+    text-align: center;
+    color: red;
+    font-style: italic;
+    background-color: white; 
+}
+#ListUsuario{
+    border-style: solid;
+    border-color: black;
+    width: 72%;
+    position: absolute;
+    margin-top: 9.8%;
+    margin-left: 26%;   
+}
+#tipo,#marcas,#veiculos,#ListUsuario{
+    border-style: outset;
+    border-width: 3px;
+    border-color: gray;
+}
+.infotabela,.titulotabela{
+    
+    background-image: -webkit-linear-gradient(gray, white);
+    border-style: ridge;
+    color: blue; 
+    border-color: gray;
+    text-align: center;
+}
+.campos{
+    border-style: ridge;
+    border-color:gray;
+    text-align: center;
+    font-family: Arial;
+}
+/* Editar */
+.editor{
+    border-style: none;
+    border-color: gray;
+    width: 50%;
+    position: absolute;
+    margin-top: 9.8%;
+    margin-left: 40%;
+}
+.editor table{
+    width: 100%;
+    margin-bottom: 1%;
+    border-style: outset;
+    border-color: gray;
+    border-width: 3px;
+}
+.aviso{
+    font-size: 20px;
+    color: red;
+    border-color: gray;
+    border-style: outset;
+    background-image: -webkit-linear-gradient(gray, white);
+}
+.BTexcluir{
+    width: 30%;
+    height: 40px;
+    margin-right: 2%;
+}
+
+#pesquisa{
+    position: absolute;
+    margin-top: 1%;
+    margin-left:37%;
+    margin-bottom: 2%;
+}
+#pesquisaveiculo{
+    font-size: 1.5em;
+    margin-left: 35%;
+}
+
+
+
+
