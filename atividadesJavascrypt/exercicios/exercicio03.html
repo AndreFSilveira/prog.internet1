@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset='utf-8'>
+		<title>Exercicio 03</title>
+		<script language="JavaScript">
+		 var input_cont = 0;
+		 var i=0;
+		 function addbotao()
+		 { 
+			for(i=0;i<document.my_form.valor.value;i++)
+			{
+				  var bot = document.createElement('input');
+				  bot.setAttribute('type', 'button');
+				  bot.setAttribute('value', 'botao '+(i+1));
+				 
+				  var local_botao = document.getElementById('local_botao');
+				  local_botao.appendChild(bot);	  
+			}
+		}
+ 
+</script>
+	</head>
+	<body>
+	    <form method="post" name="my_form" id="my_form" action="">
+		 	<input type="text" name="valor" id="valor">
+		    <input type="button" value="Criar Botoes" name="add_input" id="add_input" onclick="addbotao()" />
+		    <br><br>
+		    <div id="local_botao"></div>
+	    </form>
+ 
+	</body>
+</html>

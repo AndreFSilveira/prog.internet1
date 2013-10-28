@@ -1,0 +1,60 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exemplo3</title>
+		<script type="text/javascript">    
+            var op;
+
+			function genTab() {
+				tab.value = "";
+				
+				Radio= escolha.conta;
+				for(i=0;i< 4;i++) 
+				{
+					if(Radio[i].checked) 
+					op =Radio[i].id;
+		   		 }
+		   		
+				var val = Number(tabVal.value),line;
+				for (i=1; i <= 10 ; ++i )
+				{
+					if (op=="mu"){
+						line= val + " X " + i + "=" + ( val * i );
+						tab.value += line + "\n";
+					}
+					else if (op=="so"){
+						line= val + " + " + i + "=" + ( val + i );
+						tab.value += line + "\n";
+					}
+					else if (op=="su"){
+						line= val + " - " + i + "=" + ( val - i );
+						tab.value += line + "\n";
+					}
+					else if (op=="di"){
+						line= val + " / " + i + "=" + ( val / i );
+						tab.value += line + "\n";
+					}					
+				}					
+			}
+			var tabVal, tab;
+			function load( ) {
+				tabVal = document.getElementById("tabVal");
+				tab = document.getElementById("tab");
+				genTab();
+			}
+		</script>
+	</head>
+	<body onload='load()' id="principal">
+	<form id="escolha">
+		Escolha uma operação
+		<input type="radio" name="conta" id="mu" onclick='genTab();'>multiplicar
+		<input type="radio" name="conta" id="so" onclick='genTab();'>somar
+		<input type="radio" name="conta" id="su" onclick='genTab();'>subtrair
+		<input type="radio" name="conta" id="di" onclick='genTab();'>dividir
+		<br>Escolha um numero para realizar:
+		<input type="text" id="tabVal" onkeyup='genTab();'value="1" maxLength="2"><br>
+		<textarea id="tab" rows="10" cols="15" readonly=""/>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio 02</title>
+	</head>
+<script type="text/javascript">
+	var terceiro= "<input type='button'id='terceirob' onclick='aviso();'  value='terceiro botão'/>";
+	var quarto= "<input type='button' id='quartob' onclick='aviso();' value='quarto botão'/>";
+	function chama(){
+		document.write(terceiro);
+		document.write(quarto);
+	}
+	function aviso()
+	{		
+		setTimeout("alert('OK!');",2000);
+	}
+</script>
+<body onload ='load();'>
+		<input type ="button"onclick ='chama();'value ="Primeiro botão" />
+		<input type ="button"onclick='chama();' value ="segundo botão" />
+</body>

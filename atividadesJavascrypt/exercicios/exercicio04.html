@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html lang="pt=br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio 04</title>
+		<script type="text/javascript">
+		var sexo="";
+		var i;
+		idade = document.getElementById("nascimento");
+		tmp_trab = document.getElementById("admissao");
+
+		
+		function verifica_aposentadoria()
+		{
+			Radio= verifica.sexo;
+			for(i=0;i<2;i++) 
+			{
+				if(Radio[i].checked) 
+				sexo =Radio[i].id;
+		    }
+		    if(sexo=='F'){
+		    	alert("Mulher idade"+idade+"inicio trabalho"+tmp_trab);
+		    }
+		    else
+		    {
+		    	alert("Homem idade"+idade+"inicio trabalho"+tmp_trab);
+		    }	
+		
+		}
+		</script>
+	</head>
+	<body>
+		<div  id="aposentadoria">
+			<form id="verifica" method="post" action="">
+			<fieldset>
+			<legend><b>Verifica Aposentadoria</b></legend>
+				<label>Nome:<input type="text" name="nome"><br></label>
+				<label>Data de Nascimento:<input type="date" id="nascimento"><br></label>
+				<label>Sexo:<input type="radio" name="sexo" id="M"> Masculino</label>
+				<label><input type="radio" name="sexo" id="F"> Feminino<br></label>
+				<label>Ano De Admissão:<input type="date" id="admissao"><br></label>
+				<label><input type="button" value="Verificar" onclick="verifica_aposentadoria()"></label>
+			</fieldset>
+			</form>
+			
+		</div>
+	</body>
+</html>
