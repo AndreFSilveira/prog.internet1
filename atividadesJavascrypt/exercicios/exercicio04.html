@@ -4,45 +4,70 @@
 		<meta charset="utf-8">
 		<title>Exercicio 04</title>
 		<script type="text/javascript">
-		var sexo="";
-		var i;
-		idade = document.getElementById("nascimento");
-		tmp_trab = document.getElementById("admissao");
-
-		
 		function verifica_aposentadoria()
 		{
-			Radio= verifica.sexo;
-			for(i=0;i<2;i++) 
+			var nome= document.getElementById("nome").value;
+			var nasc= document.getElementById("nascimento").value;
+			var adm = document.getElementById("admissao").value;
+			var sexo="";
+			var temp_trab= 2013-adm;
+			var vida= 2013-nasc;
+			radio= aposentadoria.sexo;
+			for (var i=0; i< 2; i++)
 			{
-				if(Radio[i].checked) 
-				sexo =Radio[i].id;
-		    }
-		    if(sexo=='F'){
-		    	alert("Mulher idade"+idade+"inicio trabalho"+tmp_trab);
-		    }
-		    else
-		    {
-		    	alert("Homem idade"+idade+"inicio trabalho"+tmp_trab);
-		    }	
-		
+				if(radio[i].checked)
+					sexo=radio[i].value;
+			}
+
+			if(sexo=='F')
+			{
+				temp_trab += 5;
+				vida += 5;
+			}
+			if (temp_trab > 100)
+			{
+				temp_trab = 0;
+			}
+			if (vida >  100)
+			{
+				vida= 0 ;
+			}
+		    if(vida>= 60 && temp_trab >= 25)
+			{
+				alert(nome+" Já Pode Se Aposentar por idade E tempo de Contribuição!")
+			}
+			else if(vida >= 65)
+			{
+				alert(nome+" Já Pode se aposentar por idade!");
+			}
+			else if(temp_trab >= 30)
+			{
+				alert(nome+" Já Pode se Aposentar por Tempo de Contribuição!")
+			}
+			else
+			{
+				alert(nome+" Não se enquadra em nenhuma categoria para aposentadoria!");
+			}		
 		}
 		</script>
 	</head>
 	<body>
-		<div  id="aposentadoria">
-			<form id="verifica" method="post" action="">
-			<fieldset>
-			<legend><b>Verifica Aposentadoria</b></legend>
-				<label>Nome:<input type="text" name="nome"><br></label>
-				<label>Data de Nascimento:<input type="date" id="nascimento"><br></label>
-				<label>Sexo:<input type="radio" name="sexo" id="M"> Masculino</label>
-				<label><input type="radio" name="sexo" id="F"> Feminino<br></label>
-				<label>Ano De Admissão:<input type="date" id="admissao"><br></label>
-				<label><input type="button" value="Verificar" onclick="verifica_aposentadoria()"></label>
-			</fieldset>
-			</form>
-			
+		<div id="pagina">
+			<form id="aposentadoria">
+				<fieldset>
+					<legend><b>Verifica Aposentadoria</b></legend>
+				    Nome:<input type="text" id="nome"><br>
+					
+					Data de Nascimento:<input type="number" id="nascimento"><br>
+					
+					Sexo:<input type="radio" name="sexo" value="M">Masculino
+					<input type="radio" name="sexo" value="F">Feminino<br>
+					
+					Ano De Admissão:<input type="number" id="admissao"><br>
+
+					<input type="button" value="Verificar" onclick="verifica_aposentadoria()">
+				</fieldset>
+			</form>	
 		</div>
 	</body>
 </html>

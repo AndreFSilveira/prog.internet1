@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio 05</title>
+		<script type="text/javascript">
+		function compras()
+		{
+			var qnt_lar  		= document.getElementById("qnt_laranja").value;
+			var qnt_mac  		= document.getElementById("qnt_maca").value;
+			var vlr_uni_laranja = document.getElementById("vlr_uni_laranja");
+			var vlr_uni_maca    = document.getElementById("vlr_uni_maca");
+			var total_laranja   = document.getElementById("vlr_tot_laranja");
+			var total_maca      = document.getElementById("vlr_tot_maca");
+			var total_compra    = document.getElementById("total");
+
+			if(qnt_lar <= 20)
+			{
+				vlr_uni_laranja.value = "0.80";
+			}
+			if(qnt_mac <= 12)
+			{
+				vlr_uni_maca.value = "1.30";
+			}
+
+			var vlr_uni_laranja = document.getElementById("vlr_uni_laranja").value;
+			var vlr_uni_maca    = document.getElementById("vlr_uni_maca").value;
+
+			total_laranja.value   = (qnt_lar * vlr_uni_laranja).toFixed(2);
+			total_maca.value      = (qnt_mac * vlr_uni_maca).toFixed(2);
+			total_compra.innerHTML= ((qnt_lar * vlr_uni_laranja)+(qnt_mac * vlr_uni_maca)).toFixed(2);
+		}
+		</script>
+	</head>
+<body>
+	<div>
+		<table>
+			<caption><h2>Venda Da Esquina</h2></caption>
+			<thead>
+				<tr>
+					<th>Itens</th>
+					<th>Quantidade</th>
+					<th>Valor Unitario</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Laranja</td>
+					<td><input type="number" id="qnt_laranja" onkeyup="compras();"></td>
+					<td><input type="number" id="vlr_uni_laranja" onkeyup="compras();"></td>
+					<td><input type="number" id="vlr_tot_laranja" readonly></td>
+				</tr>
+				<tr>
+					<td>Maça</td>
+					<td><input type="number" id="qnt_maca" onkeyup="compras();"></td>
+					<td><input type="number" id="vlr_uni_maca" onkeyup="compras();"></td>
+					<td><input type="number" id="vlr_tot_maca" readonly></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><td>
+					<td>Total Da Compra R$</td>
+					<td id="total"><td>
+					<td><td>
+				</tr>
+			</tfoot>
+		</table>	
+	</div>
+</body>

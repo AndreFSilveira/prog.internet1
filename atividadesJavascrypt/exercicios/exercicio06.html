@@ -1,0 +1,65 @@
+<DOCTTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>exercicio 06</title>
+		<script type="text/javascript">
+			function aluno()
+			{
+				var nota1 = document.getElementById("nota1").value;
+				var nota2 = document.getElementById("nota2").value;
+				var aulas  = document.getElementById("aulas").value;
+				var faltas  = document.getElementById("faltas").value;
+				
+				if (nota1 > 100 || nota1 < 0 || nota2 > 100 || nota2 < 0)
+				{
+					alert("Nota deve ser do tipo inteiro exemplo: 100, 80, 45");
+				}
+				else if (parseInt(faltas) > parseInt(aulas))
+				{
+					alert("Numero de faltas maior que numero de aulas!");
+				}
+				else
+				{
+					var media=0;
+					var frequencia=0;
+
+					parseFloat(media = (( parseInt(nota1) + parseInt(nota2)) / 2));
+					frequencia = (((aulas - faltas) * 100) / aulas);
+					if(media >=60 && frequencia>=75)
+					{
+						alert("Aluno Aprovado!\nmedia="+media+"\nfrequencia="+frequencia+" %");
+					}
+					else
+					{
+						alert("Aluno Reprovado!\nmedia="+media+"\nfrequencia="+frequencia+" %");
+					}
+				}
+
+			}
+		</script>
+	</head>
+<body>
+	<table>
+		<caption><h2>Faculdade ABC123...<h2></caption>
+		<thead>
+			<tr>
+				<th>1ª Nota</th>
+				<th>2ª Nota</th>
+				<th>Aulas Ministradas</th>
+				<th>Faltas</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="number" id="nota1"></td>
+				<td><input type="number" id="nota2"></td>
+				<td><input type="number" id="aulas"></td>
+				<td><input type="number" id="faltas"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Verificar Siituação Aluno" onclick="aluno()"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
