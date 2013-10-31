@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Exercicio 05</title>
 		<script type="text/javascript">
+		flagL  = 1;
+		flagm  = 1;
 		function compras()
 		{
 			var qnt_lar  		= document.getElementById("qnt_laranja").value;
@@ -13,14 +15,31 @@
 			var total_laranja   = document.getElementById("vlr_tot_laranja");
 			var total_maca      = document.getElementById("vlr_tot_maca");
 			var total_compra    = document.getElementById("total");
+			
 
 			if(qnt_lar <= 20)
 			{
 				vlr_uni_laranja.value = "0.80";
 			}
+			else
+			{
+				if(flagL == 1)
+				{
+					alert("Qantidade de Laranjas\nmaior que 20 unidades\no valor unitario pode ser alterado!");
+					flagL = 0;
+				}
+			}
 			if(qnt_mac <= 12)
 			{
 				vlr_uni_maca.value = "1.30";
+			}
+			else
+			{
+				if(flagm == 1)
+				{
+					alert("Qantidade de Laranjas\nmaior que 20 unidades\no valor unitario pode ser alterado!");
+					flagm = 0;
+				}
 			}
 
 			var vlr_uni_laranja = document.getElementById("vlr_uni_laranja").value;
