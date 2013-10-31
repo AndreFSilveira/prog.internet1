@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>COOKIE</title>
+		<script type="text/javascript">
+		function setarCokieData(){
+			var dataExp = new Date();
+			dataExp.setDate(exdate.getDate()+10);
+			document.cookie=cookie+";expires="+dataExp.toGMTString();
+			//toUTCString()
+		}
+		function setarCookie()
+		{
+			var nome   = prompt("Qual é seu nome?");
+			var cookie = "nome:"+nome;
+			document.cookie=cookie;
+			setarCokieData();
+		}
+		function lerCookie()
+		{
+			var cookie = document.cookie;
+			var quebra = cookie.split(":");
+			var nome   = quebra[1];
+			alert("Seu nome é : "+nome);
+		}
+		</script>
+	</head>
+<body onload="lerCookie()">
+	<input type="button" onclick="setarCookie()" value="gravar cookie">
+	<input type="button" onclick="setarCokieData()" value="Data cookie">
+</body>
+</html>
