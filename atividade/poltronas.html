@@ -1,0 +1,61 @@
+<DOCTYPE html>
+<html langue="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Viação UTFPR</title>
+		<style type="text/css" media="screen">
+			#cadeira_1{
+				width: 30%;
+			}
+			#cadeira_4{
+				width: 30%;
+			}
+			#cadeira_2{
+				width: 30%;
+			}
+			#cadeira_3{
+				width: 30%;				
+			}	
+		</style>
+		<script type="text/javascript">
+		function onload()
+		{			
+			for (i=0; i< 4; i++){
+				if ( localStorage.getItem('nome'+i) !=null){				
+					document.getElementById('cadeira'+i).src="imagens/vermelha.jpg";
+					document.getElementById('cadeira'+i).title = localStorage.getItem('nome'+i);
+				}
+			}
+		}
+		function venda_passagem(i)
+		{
+
+			if ( localStorage.getItem('nome'+i) == null){
+				var a = prompt("Digite o nome do Cliente:");
+				if(a != null)
+					localStorage.setItem('nome'+i,a);
+			}
+			else
+				alert("Poltrona Ocupada!\n por :"+localStorage.getItem('nome'+i));
+			if (localStorage.getItem('nome'+i) != null){
+				document.getElementById('cadeira'+i).title = localStorage.getItem('nome'+i);
+				document.getElementById('cadeira'+i).src="imagens/vermelha.jpg";
+			}
+		}
+		</script>
+	</head>
+<body onload="onload();">	
+	<div id="cadeira_1">
+		<a href="#" onclick="venda_passagem(1);"><img id="cadeira1" src="imagens/verde.jpg" title="livre_1" height="-1" width="-1" alt="Cadeira Vazia"></a>
+	</div>
+	<div id="cadeira_2">
+		<a href="#" onclick="venda_passagem(2);"><img id="cadeira2" src="imagens/verde.jpg" title="livrre_2" height="-1" width="-1" alt="Cadeira Vazia"></a>
+	</div>
+	<div id="cadeira_3">
+		<a href="#" onclick="venda_passagem(3);"><img id="cadeira3" src="imagens/verde.jpg" title="livre_3" height="-1" width="-1" alt="Cadeira Vazia"></a>
+	</div>
+	<div id="cadeira_4">
+		<a href="#" onclick="venda_passagem(4);"><img id="cadeira4" src="imagens/verde.jpg" title="livre_4" height="-1" width="-1" alt="Cadeira Vazia"></a>
+	</div>
+</body>
+</html>
